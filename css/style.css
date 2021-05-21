@@ -1,0 +1,2616 @@
+/*------------------------ FONTS START------------------------*/
+@font-face {
+    font-family: 'Roboto-Black', sans-serif;
+    src: url(../fonts/Roboto-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Roboto-BlackItalic', sans-serif;
+    src: url(../fonts/Roboto-Italic.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold', sans-serif;
+    src: url(../fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Roboto-BoldItalic', sans-serif;
+    src: url(../fonts/Roboto-BoldItalic.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Roboto-Italic', sans-serif;
+    src: url(../fonts/Roboto-Italic.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Roboto-Light', sans-serif;
+    src: url(../fonts/Roboto-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto-LightItalic', sans-serif;
+    src: url(../fonts/Roboto-LightItalic.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto-Medium', sans-serif;
+    src: url(../fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto-MediumItalic', sans-serif;
+    src: url(../fonts/Roboto-MediumItalic.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular', sans-serif;
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto-Thin', sans-serif;
+    src: url(../fonts/Roboto-Thin.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Roboto-ThinItalic', sans-serif;
+    src: url(../fonts/Roboto-ThinItalic.ttf);
+    font-weight: 100;
+}
+/*------------------------ FONTS END------------------------*/
+
+
+
+html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    /*font-family: 'Roboto', sans-serif !important;*/
+}
+
+.light-blue { background: #3B7DDD !important; }
+
+.blue { background: #6859F4 !important; }
+
+.off-red { background: #E85C43 !important; }
+
+.light-green { background: #35A448 !important; }
+
+.positive { color: #60DF5E !important; }
+
+.negative { color: #E3749F !important; }
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+.dashboard {  }
+
+
+/************************************************** Header Start **************************************************/
+.navigation {
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    /*border: 1px solid black;*/
+}
+
+.navigation .logo {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation .logo i {
+    font-size: 40px;
+    color: #5646FE;
+}
+
+.navigation .logo .logo-title {
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.navigation .features {
+    width: 80%;
+    margin: 0px 0px 0px 26px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.navigation .features .part-one {
+    
+}
+
+.navigation .features .part-two {
+    border: 1px solid #B5BBC7;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 20px;
+    width: 40%;
+}
+
+.navigation .features .part-two .input-group {
+    background-color: transparent !important;
+}
+
+.navigation .features .part-two .input-group:active,
+.navigation .features .part-two .input-group:focus {
+    border: 1px solid #5646FE !important;
+    border-color: #5646FE !important;
+}
+
+.navigation .features .part-two .input-group>.form-control:focus {
+    color: #212529;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.navigation .features .part-two .custom-group .form-control {
+    border: none;
+}
+
+.navigation .features .part-two .custom-group .custom-field:focus {
+    border: none;
+}
+
+.navigation .features .part-two .custom-search {
+    background-color: transparent;
+}
+
+.navigation .features .part-three,
+.navigation .features .part-four,
+.navigation .features .part-five {
+    border: 1px solid #B5BBC7;
+    color: #B5BBC7;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+    margin-right: 20px;
+    position: relative;
+}
+
+.navigation .features .part-three:hover,
+.navigation .features .part-four:hover {
+    color: #5646FE;
+    border: 1px solid #5646FE;
+}
+
+.navigation .features .part-three .notification,
+.navigation .features .part-four .notification {
+	display: block;
+    position: absolute;
+    width: 20px;
+	height: 20px;
+	border-radius: 50%;
+    background-color: #5646FE;
+    color: white;
+    font-size: 10px;
+	font-weight: 500;
+    text-align: center;
+	vertical-align: middle;
+    padding: 3px 0;
+    right: -7px;
+    top: -11px;
+    z-index: 1;
+    transition: .3s;
+ }
+
+.navigation .features .part-five {
+    margin-right: 0px;
+}
+
+.navigation .features .part-five img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/************************************************** Header End **************************************************/
+
+/************************************************** Main Start **************************************************/
+.main {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+
+/********************* Side-Bar Start *********************/
+.side-bar {
+    width: 20%;
+}
+
+.side-bar .side-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.side-bar .side-bar-wrapper .item-box {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px 0px;
+    text-decoration: none;
+    outline: none;
+    transition: 3s;
+}
+
+.side-bar .side-bar-wrapper .item-box:after {
+    display: none;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-bottom: 1px solid #5646FE;
+    width: 92%;
+}
+
+.side-bar .side-bar-wrapper .item-box:nth-child(7):after {
+    border-bottom: 1px solid transparent;
+}
+
+.side-bar .side-bar-wrapper .item-box:hover:after {
+    display: block;
+}
+
+.side-bar .side-bar-wrapper .item-box:hover .link-icon {
+    color: #5646FE;
+}
+
+.side-bar .side-bar-wrapper .item-box:hover .link-title {
+    color: #5646FE;
+}
+
+.side-bar .side-bar-wrapper .item-box:hover .link-notification {
+    color: #5646FE;
+    border: 1px solid #5646FE;
+    background: white;
+}
+
+.side-bar .side-bar-wrapper .item-box:nth-child(7) {
+    margin: 0 !important;
+    padding: 0px 0 !important;
+}
+
+.side-bar .side-bar-wrapper .item-box > span:nth-child(1) {
+    width: 13%;
+}
+
+.side-bar .side-bar-wrapper .item-box > span:nth-child(2) {
+    width: 57%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.side-bar .side-bar-wrapper .item-box .horizontal-line {
+   width: 100%;
+   height: 1px;
+   color: #B5BBC7;
+}
+
+.side-bar .side-bar-wrapper .item-box .link-icon {
+    font-size: 30px;
+    color: #B5BBC7;
+}
+
+.side-bar .side-bar-wrapper .item-box .link-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #B5BBC7;
+    text-align: center;
+}
+
+.side-bar .side-bar-wrapper .item-box .link-notification {
+    width: 22%;
+    height: 36px;
+    background: #5646FE;
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.side-bar .side-bar-wrapper .item-box .tooltiptext {
+    display: none;
+}
+
+.side-bar .side-bar-wrapper .item-box .tooltiptext {
+    display: none;
+    position: absolute;
+    left: 62px;
+    top: 110px;
+    width: 100px;
+    background-color: #B0B9CA;
+    color: #000000;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    left: 55px;
+    top: 9px;
+    z-index: 1;
+    transition: .3s;
+}
+
+.side-bar .side-bar-wrapper .item-box:hover .tooltiptext:before {
+    border: solid;
+    border-color: #B0B9CA transparent;
+    border-width: 12px 8px 0 8px;
+    content: "";
+    left: -11px;
+    top: 12px;
+    position: absolute;
+    -ms-transform: rotate(20deg);
+    transform: rotate(-34deg);
+}
+/********************* Side-Bar End *********************/
+
+/********************* Content Start *********************/
+.content {
+    width: 80%;
+    background: #F4F7FC;
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: 17px 50px;
+}
+
+.wrapper .overview-up {
+    margin-bottom: 10px;
+}
+
+.wrapper .overview-up .parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .overview-up .parent .child-one {
+  
+}
+
+.wrapper .overview-up .parent .child-two {
+
+}
+
+.wrapper .overview-up .parent .child-two .dropdown-wrapper > div {
+  margin: 0 12px 0 0;
+}
+
+.wrapper .overview-up .parent .child-two .dropdown-wrapper > div:last-child  {
+  margin-right: 0;
+}
+
+
+.wrapper .overview-up .title  {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.wrapper .overview-up .dropdown-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/**/
+.wrapper .overview-up .dropdown-wrapper .user-custom-btn i,
+.wrapper .overview-up .dropdown-wrapper .location-custom-btn i {
+  color: #B0B9CA;
+}
+
+
+.wrapper .overview-up .dropdown-wrapper .user-custom-btn,
+.wrapper .overview-up .dropdown-wrapper .location-custom-btn {
+    color: #000000;
+    background: #F4F7FC;
+    border: 1px solid #B0B9CA;
+    border-radius: 50px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.wrapper .overview-up .dropdown-wrapper .user-custom-btn:active, 
+.wrapper .overview-up .dropdown-wrapper .user-custom-btn:focus,
+.wrapper .overview-up .dropdown-wrapper .location-custom-btn:active,
+.wrapper .overview-up .dropdown-wrapper .location-custom-btn:focus {
+    border: 2px solid #BFC4CD;
+    box-shadow: none;
+}
+
+.user-custom-dropdown .dropdown-menu {
+    min-width: 10.5rem !important;
+    padding: 0rem !important;
+}
+
+.location-custom-dropdown .dropdown-menu {
+    min-width: 12.5rem !important;
+    padding: 0rem !important;
+}
+
+.location-custom-dropdown .dropdown-menu {
+    min-width: 12.5rem !important;
+    padding: 0rem !important;
+}
+
+.user-custom-dropdown .user-custom-dropdown-menu .user-custom-item,
+.location-custom-dropdown .location-custom-dropdown-menu .location-custom-item {
+    font-size: 13px;
+    color: #000000;
+}
+
+.user-custom-dropdown .user-custom-dropdown-menu .user-custom-item.active,
+.user-custom-dropdown .user-custom-dropdown-menu .user-custom-item:active,
+.user-custom-dropdown .user-custom-dropdown-menu .user-custom-item:hover,
+.location-custom-dropdown .location-custom-dropdown-menu .location-custom-item.active,
+.location-custom-dropdown .location-custom-dropdown-menu .location-custom-item:active,
+.location-custom-dropdown .location-custom-dropdown-menu .location-custom-item:hover { 
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #5646FE !important;
+    box-shadow: none;
+}
+
+.user-custom-dropdown  .dropdown-menu.show,
+.location-custom-dropdown .dropdown-menu.show {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
+    font-size: 13px;
+}
+/**/
+.wrapper .overview-up .dropdown-wrapper .shapping {
+    font-weight: normal;
+    font-size: 15px;
+    color: #000000;
+    background: #F4F7FC;
+    border: 1px solid #B0B9CA;
+    border-radius: 50px;
+    padding: 4px 10px;
+}
+
+.wrapper .overview-up .dropdown-wrapper .shapping:focus,
+.wrapper .overview-up .dropdown-wrapper .shapping.active,
+.wrapper .overview-up .dropdown-wrapper .shapping:active {
+    border: 2px solid #B0B9CA;
+}
+
+.wrapper .overview-up .dropdown-wrapper .shapping .inner {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.wrapper .overview-up .dropdown-wrapper .shapping .inner:focus, 
+.wrapper .overview-up .dropdown-wrapper .shapping .inner:active {
+    border: none;
+    outline: none;
+}
+.wrapper .overview-up .dropdown-wrapper .shapping i {
+    font-size: 18px;
+    color: red;
+}
+/**/
+
+.wrapper .overview-bottom {
+    margin-bottom: 50px;
+}
+
+.count-appointments {
+  margin-left: 10px;
+  color:#B0B9CA;
+  font-size: 15px;
+}
+
+.overview-item-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.overview-item-box .box-caption {
+    margin: 0;
+    padding: 6% 10px;
+}
+
+.overview-item-box .box-caption .box-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.overview-item-box .box-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 143px;
+    padding: 10px;
+    background: #FFFFFF;
+}
+
+.overview-item-box .box-body .item {
+    width: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview-item-box .box-body .item .vertical-graph {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.overview-item-box .box-body .item .vertical-graph>span {
+    border-radius: 3px;
+    background-color:#B0B9CA;
+    margin: 0px 3px;
+    width: 15px;
+}
+
+.overview-item-box .box-body .item .vertical-graph .ten {
+    height: 10%;
+}
+
+.overview-item-box .box-body .item .vertical-graph .twenty {
+    height: 20%;
+} 
+
+.overview-item-box .box-body .item .vertical-graph .thirty {
+    height: 30%;
+}
+
+.overview-item-box .box-body .item .vertical-graph .fourty {
+    height: 40%;
+}
+
+.overview-item-box .box-body .item .vertical-graph .fifty {
+    height: 50%;
+}
+
+.overview-item-box .box-body .item .vertical-graph .sixty {
+    height: 60%;
+}
+
+.overview-item-box .box-body .item .vertical-graph .seventy {
+    height: 70%;
+}
+
+.overview-item-box .box-body .item .vertical-graph .eighty {
+    height: 80%;
+}
+
+.overview-item-box .box-body .item .vertical-graph .ninty {
+    height: 90%;
+}
+
+.overview-item-box .box-body .item .vertical-graph .hundred {
+    height: 100%;
+}
+
+
+.overview-item-box .box-body .item  .middle-text-upper {
+    color: #000000;
+    font-size: 18px;
+}
+
+.overview-item-box .box-body .item  .middle-text-lower {
+    font-size: 18px;
+    color: #B0B9CA;
+}
+
+.overview-item-box .box-body .item .item-percentage {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.wrapper .Todays-up {
+    margin-bottom: 10px;
+}
+
+.wrapper .Todays-up .title  {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.wrapper .Todays-up .display-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.wrapper .Todays-up .display-type a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 16px;
+    vertical-align: middle;
+}
+
+.wrapper .Todays-up .display-type a i:hover {
+    color: #3B27FC;
+}
+
+.wrapper .Todays-up .display-type a > i{
+    color: #B0B9CA;
+    font-size: 22px;
+}
+
+.wrapper .Todays-up .display-type a:nth-child(2){
+    padding: 2px 0px;
+    vertical-align: middle;
+}
+
+
+.wrapper .Todays-bottom {
+
+}
+
+.list-box {
+    background: #FFFFFF;
+    border-radius: 3px;
+    margin: 5px 0px;
+    padding: 7%;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.list-box .action-left {  float: left; }
+
+.list-box .action-right { float: right; }
+
+.list-box .action-left .action-circle, .list-box .action-right .action-circle {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.list-box .action-left .action-circle:hover {
+    border: 1px solid #3B27FC;
+} 
+
+.list-box .action-right .action-circle:hover {
+    border: 1px solid #3B27FC;
+    /*box-shadow: 0 0 0 5px rgba(#000,.4) , 0 0 0 10px  #f05f75;*/
+}
+
+.list-box .action-left .action-circle i, .list-box .action-right .action-circle i { font-size: 18px; margin: 0 auto; }
+
+.list-box .action-left .action-circle, .list-box .action-right .action-circle .notification { color: #1EA235 !important; }
+
+.list-box .action-left .action-circle, .list-box .action-right .action-circle .checking { color: #1EA235 !important; }
+
+.list-box .action-left .action-circle, .list-box .action-right .action-circle .cross { color: #BB3931 !important; }
+
+.list-box .pic-box {
+    margin: 0 auto;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    border: 1px solid #C4C4C4;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
+    margin-top: 40px !important;
+}
+
+.list-box .pic-box img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.list-box .person-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.person-designation {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #C4C4C4;
+    text-align: center;
+}
+
+.list-box  .time {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: #C4C4C4;
+}
+
+.list-box  .time > span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: left;
+    color: #000000;
+}
+
+.list-box  .date {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    color: #C4C4C4;
+    text-align: right;
+}
+
+.list-box .btn-box {
+    /*padding: 50px 60px 0px 60px;*/
+    padding: 20% 6% 0% 6%;
+}
+
+.list-box  .list-btn {
+    width: 100%;
+    height: 36px;
+    background: #3D425F;
+    border-radius: 60px;
+}
+.list-box  .list-btn .list-details {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.list-box:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    cursor: pointer;
+}
+
+.show-more-sizing {
+    padding-top: 10px;
+}
+
+.show-more {
+    background: #5646FE;
+    /*opacity: 0.5;*/
+    border-radius: 30px;
+    display: flex;
+    margin: auto;
+    padding: 10px 30px;
+}
+
+.show-more-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.show-more:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/********************* Content End *********************/
+
+.progress {
+    width: 60px;
+    height: 60px;
+    line-height: 100px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+}
+
+.progress:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #efefef;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.progress .progress-left {
+    left: 0;
+}
+.progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    border-color: #6859F4;
+}
+.progress .progress-bar-two {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    border-color: #35A448 !important;
+}
+.progress .progress-left .progress-bar, .progress .progress-left .progress-bar-two {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+.progress .progress-right {
+    right: 0;
+}
+.progress .progress-right .progress-bar , .progress .progress-right .progress-bar-two{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+}
+.progress .progress-value {
+    display: flex;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 11px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-weight: 300;
+}
+.progress .progress-value span {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+  
+  /* This for loop creates the necessary css animation names 
+  Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+  */
+  
+  .progress[data-percentage="1"] .progress-right .progress-bar {
+    animation: loading-1 0.5s linear forwards;
+  }
+  .progress[data-percentage="1"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="2"] .progress-right .progress-bar {
+    animation: loading-2 0.5s linear forwards;
+  }
+  .progress[data-percentage="2"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="3"] .progress-right .progress-bar {
+    animation: loading-3 0.5s linear forwards;
+  }
+  .progress[data-percentage="3"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="4"] .progress-right .progress-bar {
+    animation: loading-4 0.5s linear forwards;
+  }
+  .progress[data-percentage="4"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="5"] .progress-right .progress-bar {
+    animation: loading-5 0.5s linear forwards;
+  }
+  .progress[data-percentage="5"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="6"] .progress-right .progress-bar {
+    animation: loading-6 0.5s linear forwards;
+  }
+  .progress[data-percentage="6"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="7"] .progress-right .progress-bar {
+    animation: loading-7 0.5s linear forwards;
+  }
+  .progress[data-percentage="7"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="8"] .progress-right .progress-bar {
+    animation: loading-8 0.5s linear forwards;
+  }
+  .progress[data-percentage="8"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="9"] .progress-right .progress-bar {
+    animation: loading-9 0.5s linear forwards;
+  }
+  .progress[data-percentage="9"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="10"] .progress-right .progress-bar {
+    animation: loading-10 0.5s linear forwards;
+  }
+  .progress[data-percentage="10"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="11"] .progress-right .progress-bar {
+    animation: loading-11 0.5s linear forwards;
+  }
+  .progress[data-percentage="11"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="12"] .progress-right .progress-bar {
+    animation: loading-12 0.5s linear forwards;
+  }
+  .progress[data-percentage="12"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="13"] .progress-right .progress-bar {
+    animation: loading-13 0.5s linear forwards;
+  }
+  .progress[data-percentage="13"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="14"] .progress-right .progress-bar {
+    animation: loading-14 0.5s linear forwards;
+  }
+  .progress[data-percentage="14"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="15"] .progress-right .progress-bar {
+    animation: loading-15 0.5s linear forwards;
+  }
+  .progress[data-percentage="15"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="16"] .progress-right .progress-bar {
+    animation: loading-16 0.5s linear forwards;
+  }
+  .progress[data-percentage="16"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="17"] .progress-right .progress-bar {
+    animation: loading-17 0.5s linear forwards;
+  }
+  .progress[data-percentage="17"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="18"] .progress-right .progress-bar {
+    animation: loading-18 0.5s linear forwards;
+  }
+  .progress[data-percentage="18"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="19"] .progress-right .progress-bar {
+    animation: loading-19 0.5s linear forwards;
+  }
+  .progress[data-percentage="19"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="20"] .progress-right .progress-bar {
+    animation: loading-20 0.5s linear forwards;
+  }
+  .progress[data-percentage="20"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="21"] .progress-right .progress-bar {
+    animation: loading-21 0.5s linear forwards;
+  }
+  .progress[data-percentage="21"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="22"] .progress-right .progress-bar {
+    animation: loading-22 0.5s linear forwards;
+  }
+  .progress[data-percentage="22"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="23"] .progress-right .progress-bar {
+    animation: loading-23 0.5s linear forwards;
+  }
+  .progress[data-percentage="23"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="24"] .progress-right .progress-bar {
+    animation: loading-24 0.5s linear forwards;
+  }
+  .progress[data-percentage="24"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="25"] .progress-right .progress-bar {
+    animation: loading-25 0.5s linear forwards;
+  }
+  .progress[data-percentage="25"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="26"] .progress-right .progress-bar {
+    animation: loading-26 0.5s linear forwards;
+  }
+  .progress[data-percentage="26"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="27"] .progress-right .progress-bar {
+    animation: loading-27 0.5s linear forwards;
+  }
+  .progress[data-percentage="27"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="28"] .progress-right .progress-bar {
+    animation: loading-28 0.5s linear forwards;
+  }
+  .progress[data-percentage="28"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="29"] .progress-right .progress-bar {
+    animation: loading-29 0.5s linear forwards;
+  }
+  .progress[data-percentage="29"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="30"] .progress-right .progress-bar {
+    animation: loading-30 0.5s linear forwards;
+  }
+  .progress[data-percentage="30"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="31"] .progress-right .progress-bar {
+    animation: loading-31 0.5s linear forwards;
+  }
+  .progress[data-percentage="31"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="32"] .progress-right .progress-bar,
+  .progress[data-percentage="32"] .progress-right .progress-bar-two {
+    animation: loading-32 0.5s linear forwards;
+  }
+  .progress[data-percentage="32"] .progress-left .progress-bar,
+  .progress[data-percentage="32"] .progress-left .progress-bar-two {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="33"] .progress-right .progress-bar {
+    animation: loading-33 0.5s linear forwards;
+  }
+  .progress[data-percentage="33"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="34"] .progress-right .progress-bar {
+    animation: loading-34 0.5s linear forwards;
+  }
+  .progress[data-percentage="34"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="35"] .progress-right .progress-bar {
+    animation: loading-35 0.5s linear forwards;
+  }
+  .progress[data-percentage="35"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="36"] .progress-right .progress-bar {
+    animation: loading-36 0.5s linear forwards;
+  }
+  .progress[data-percentage="36"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="37"] .progress-right .progress-bar {
+    animation: loading-37 0.5s linear forwards;
+  }
+  .progress[data-percentage="37"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="38"] .progress-right .progress-bar {
+    animation: loading-38 0.5s linear forwards;
+  }
+  .progress[data-percentage="38"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="39"] .progress-right .progress-bar {
+    animation: loading-39 0.5s linear forwards;
+  }
+  .progress[data-percentage="39"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="40"] .progress-right .progress-bar {
+    animation: loading-40 0.5s linear forwards;
+  }
+  .progress[data-percentage="40"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="41"] .progress-right .progress-bar {
+    animation: loading-41 0.5s linear forwards;
+  }
+  .progress[data-percentage="41"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="42"] .progress-right .progress-bar {
+    animation: loading-42 0.5s linear forwards;
+  }
+  .progress[data-percentage="42"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="43"] .progress-right .progress-bar {
+    animation: loading-43 0.5s linear forwards;
+  }
+  .progress[data-percentage="43"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="44"] .progress-right .progress-bar {
+    animation: loading-44 0.5s linear forwards;
+  }
+  .progress[data-percentage="44"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="45"] .progress-right .progress-bar {
+    animation: loading-45 0.5s linear forwards;
+  }
+  .progress[data-percentage="45"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="46"] .progress-right .progress-bar {
+    animation: loading-46 0.5s linear forwards;
+  }
+  .progress[data-percentage="46"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="47"] .progress-right .progress-bar {
+    animation: loading-47 0.5s linear forwards;
+  }
+  .progress[data-percentage="47"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="48"] .progress-right .progress-bar {
+    animation: loading-48 0.5s linear forwards;
+  }
+  .progress[data-percentage="48"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="49"] .progress-right .progress-bar {
+    animation: loading-49 0.5s linear forwards;
+  }
+  .progress[data-percentage="49"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="50"] .progress-right .progress-bar,
+  .progress[data-percentage="50"] .progress-right .progress-bar-two {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="50"] .progress-left .progress-bar,
+  .progress[data-percentage="50"] .progress-left .progress-bar-two {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="51"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="51"] .progress-left .progress-bar {
+    animation: loading-1 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="52"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="52"] .progress-left .progress-bar {
+    animation: loading-2 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="53"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="53"] .progress-left .progress-bar {
+    animation: loading-3 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="54"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="54"] .progress-left .progress-bar {
+    animation: loading-4 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="55"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="55"] .progress-left .progress-bar {
+    animation: loading-5 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="56"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="56"] .progress-left .progress-bar {
+    animation: loading-6 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="57"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="57"] .progress-left .progress-bar {
+    animation: loading-7 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="58"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="58"] .progress-left .progress-bar {
+    animation: loading-8 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="59"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="59"] .progress-left .progress-bar {
+    animation: loading-9 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="60"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="60"] .progress-left .progress-bar {
+    animation: loading-10 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="61"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="61"] .progress-left .progress-bar {
+    animation: loading-11 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="62"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="62"] .progress-left .progress-bar {
+    animation: loading-12 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="63"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="63"] .progress-left .progress-bar {
+    animation: loading-13 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="64"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="64"] .progress-left .progress-bar {
+    animation: loading-14 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="65"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="65"] .progress-left .progress-bar {
+    animation: loading-15 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="66"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="66"] .progress-left .progress-bar {
+    animation: loading-16 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="67"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="67"] .progress-left .progress-bar {
+    animation: loading-17 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="68"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="68"] .progress-left .progress-bar {
+    animation: loading-18 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="69"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="69"] .progress-left .progress-bar {
+    animation: loading-19 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="70"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="70"] .progress-left .progress-bar {
+    animation: loading-20 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="71"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="71"] .progress-left .progress-bar {
+    animation: loading-21 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="72"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="72"] .progress-left .progress-bar {
+    animation: loading-22 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="73"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="73"] .progress-left .progress-bar {
+    animation: loading-23 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="74"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="74"] .progress-left .progress-bar {
+    animation: loading-24 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="75"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="75"] .progress-left .progress-bar {
+    animation: loading-25 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="76"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="76"] .progress-left .progress-bar {
+    animation: loading-26 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="77"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="77"] .progress-left .progress-bar {
+    animation: loading-27 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="78"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="78"] .progress-left .progress-bar {
+    animation: loading-28 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="79"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="79"] .progress-left .progress-bar {
+    animation: loading-29 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="80"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="80"] .progress-left .progress-bar {
+    animation: loading-30 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="81"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="81"] .progress-left .progress-bar {
+    animation: loading-31 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="82"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="82"] .progress-left .progress-bar {
+    animation: loading-32 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="83"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="83"] .progress-left .progress-bar {
+    animation: loading-33 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="84"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="84"] .progress-left .progress-bar {
+    animation: loading-34 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="85"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="85"] .progress-left .progress-bar {
+    animation: loading-35 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="86"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="86"] .progress-left .progress-bar {
+    animation: loading-36 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="87"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="87"] .progress-left .progress-bar {
+    animation: loading-37 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="88"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="88"] .progress-left .progress-bar {
+    animation: loading-38 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="89"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="89"] .progress-left .progress-bar {
+    animation: loading-39 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="90"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="90"] .progress-left .progress-bar {
+    animation: loading-40 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="91"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="91"] .progress-left .progress-bar {
+    animation: loading-41 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="92"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="92"] .progress-left .progress-bar {
+    animation: loading-42 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="93"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="93"] .progress-left .progress-bar {
+    animation: loading-43 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="94"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="94"] .progress-left .progress-bar {
+    animation: loading-44 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="95"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="95"] .progress-left .progress-bar {
+    animation: loading-45 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="96"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="96"] .progress-left .progress-bar {
+    animation: loading-46 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="97"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="97"] .progress-left .progress-bar {
+    animation: loading-47 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="98"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="98"] .progress-left .progress-bar {
+    animation: loading-48 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="99"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="99"] .progress-left .progress-bar {
+    animation: loading-49 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="100"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="100"] .progress-left .progress-bar {
+    animation: loading-50 0.5s linear forwards 0.5s;
+  }
+  
+  
+/************************************************** Main End **************************************************/
+
+/* Extra Small devices */
+
+@media  (max-width: 575px)  {
+    .navigation {
+        flex-direction: column;
+        padding: 10px 8px;
+    }
+
+    .navigation .logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+
+    .navigation .features {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .navigation .logo i {
+        font-size: 30px;
+    }
+
+    .navigation .logo .logo-title {
+        font-size: 20px;
+    }
+
+    .navigation .features .part-one { margin-right: 5px; }
+    
+    .navigation .features .part-one span {
+        font-size: 13px;
+    }
+
+    .navigation .features .part-two {
+        width: 70%;
+        margin-right: 5px;
+    }
+
+    .navigation .features .part-two .input-group>.form-control  { 
+        padding: 0.275rem 0.25rem;
+        font-size: 13px;
+    }
+
+    .navigation .features .part-two .input-group-text {
+        padding: 0.1rem .25rem;
+        font-size: 13px;
+    }
+
+    .navigation .features .part-three, 
+    .navigation .features .part-four, 
+    .navigation .features .part-five {     
+        width: 20px;
+        height: 20px;
+        margin-right: 5px; 
+    }
+
+    .navigation .features .part-three i, 
+    .navigation .features .part-four i {
+        font-size: 8px;
+    }
+
+    .navigation .features .part-three .notification, 
+    .navigation .features .part-four .notification {
+        width: 15px;
+        height: 15px;
+        font-size: 6px;
+        padding: 3px 0;
+    }
+
+    .side-bar { width: 15%; }
+
+    .side-bar .side-bar-wrapper { padding: 10px 25%; }
+
+    .side-bar .side-bar-wrapper .item-box { width: 100%; display: grid; justify-content: center; }
+
+    .side-bar .side-bar-wrapper .item-box .link-title  { display: none; }
+
+    .side-bar .side-bar-wrapper .item-box .link-notification { display: none; }
+    
+    .side-bar .side-bar-wrapper .item-box:after { width: 100%; }
+
+    .side-bar .side-bar-wrapper .item-box:hover .tooltiptext { display: block; }
+
+    .content { width: 85%; }
+
+    .wrapper .overview-up .parent {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px dashed #B0B9CA;
+    }
+
+    .wrapper .overview-up .dropdown-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .wrapper .overview-up .parent .child-two .dropdown-wrapper > div {
+      margin: auto;
+    }
+
+    .wrapper .overview-up .parent .child-two .dropdown-wrapper > div:last-child {
+      margin: auto;
+    }
+
+    .wrapper .overview-up .dropdown-wrapper .user-custom-btn, .wrapper .overview-up .dropdown-wrapper .location-custom-btn {
+      margin: 2px 0px;
+      font-size: 10px;
+    }
+
+    .user-custom-dropdown .dropdown-menu {
+      min-width: 9rem !important;
+    }
+
+    .location-custom-dropdown .dropdown-menu {
+      min-width: 10rem !important;
+    }
+
+    .wrapper .overview-up .dropdown-wrapper .shapping {
+      font-size: 10px;
+      padding: 5px 10px;
+      margin: 2px 0px;
+    }
+
+    .overview-item-box {  margin-bottom: 10px  !important;  }
+
+    .progress {
+      width: 37px;
+      height: 37px;
+    }
+  
+    .progress .progress-value {
+      font-size: 9px;
+    }
+  
+    .progress .progress-value span {
+      font-size: 9px;
+    }  
+  
+    .overview-item-box .box-body .item .vertical-graph {
+      height: 37px;
+      width: 37px;
+    }
+  
+    .overview-item-box .box-body .item .vertical-graph>span {
+      margin: 0px 1px;
+      width: 5px;
+    }
+  
+    .overview-item-box .box-body .item .middle-text-upper {
+      font-size: 14px;
+    }
+  
+    .overview-item-box .box-body .item .middle-text-lower {
+      font-size: 14px;
+    }
+  
+    .overview-item-box .box-body .item .item-percentage {
+      font-size: 14px;
+    }
+
+    .count-appointments { 
+      display: none;
+     }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navigation {
+        flex-direction: column;
+        padding: 15px 50px;
+    }
+
+    .navigation .logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .navigation .features {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .navigation .features .part-one { margin-right: 10px; }
+    
+    .navigation .features .part-one span {
+        font-size: 14px;
+    }
+
+    .navigation .features .part-two {
+        width: 53%;
+        margin-right: 10px;
+    }
+
+    .navigation .features .part-three, 
+    .navigation .features .part-four, 
+    .navigation .features .part-five { margin-right: 10px; }
+    
+    .side-bar { width: 15%; }
+
+    .side-bar .side-bar-wrapper {  padding: 10px 25%; }
+
+    .side-bar .side-bar-wrapper .item-box { width: 100%; display: grid; justify-content: center; }
+
+    .side-bar .side-bar-wrapper .item-box .link-title  { display: none; }
+
+    .side-bar .side-bar-wrapper .item-box .link-notification { display: none; }
+
+    .side-bar .side-bar-wrapper .item-box:after { width: 100%; }
+
+    .side-bar .side-bar-wrapper .item-box:hover .tooltiptext { display: block; }
+
+    .content { width: 85%; }
+
+    .overview-item-box {  margin-bottom: 10px  !important;  }
+
+    .wrapper .overview-up .parent {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .wrapper .overview-up .dropdown-wrapper .user-custom-btn, .wrapper .overview-up .dropdown-wrapper .location-custom-btn {
+      font-size: 8px;
+    }
+
+    .user-custom-dropdown .dropdown-menu {
+      min-width: 9rem !important;
+    }
+
+    .location-custom-dropdown .dropdown-menu {
+      min-width: 9rem !important;
+    }
+
+    .wrapper .overview-up .dropdown-wrapper .shapping {
+      font-size: 7px;
+      padding: 5px 10px;
+    }
+
+    .progress {
+      width: 47px;
+      height: 47px;
+    }
+
+    .overview-item-box .box-body .item .vertical-graph {
+      height: 47px;
+      width: 47px;
+    }
+
+    .overview-item-box .box-body .item .vertical-graph>span {
+      margin: 0px 2px;
+      width: 5px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navigation {
+      padding: 15px 50px 15px 18px;
+  }
+
+  .navigation .logo .logo-title {
+      font-size: 17px;
+  }
+
+  .navigation .features {
+      margin: 0px 0px 0px 55px;
+  }
+
+  .navigation .features .part-one { margin-right: 10px; }
+
+  .navigation .features .part-two {
+      width: 46%;
+      margin-right: 10px;
+      
+  }
+
+  .side-bar .side-bar-wrapper .item-box .link-icon { font-size: 18px; }
+
+  .side-bar .side-bar-wrapper .item-box { margin: 3px 0px; }
+
+  .side-bar .side-bar-wrapper .item-box > span:nth-child(2) { padding-left: 9px; }
+
+  .side-bar .side-bar-wrapper .item-box:after { width: 100%; }
+
+  .side-bar .side-bar-wrapper .item-box .link-title { font-size: 10px; }
+
+  .side-bar .side-bar-wrapper .item-box .link-notification {
+      width: 30%;
+      height: 20px;
+      font-size: 10px;
+  }
+
+  .wrapper .overview-up .dropdown-wrapper .user-custom-btn, .wrapper .overview-up .dropdown-wrapper .location-custom-btn {
+    font-size: 8px;
+  }
+
+  .user-custom-dropdown .dropdown-menu {
+    min-width: 9rem !important;
+  }
+
+  .location-custom-dropdown .dropdown-menu {
+    min-width: 9rem !important;
+  }
+
+  .wrapper .overview-up .dropdown-wrapper .shapping {
+    font-size: 8px;
+  }
+  
+  .wrapper .Todays-up .display-type a > i {  font-size: 20px; }
+
+  .overview-item-box .box-caption .box-title {  font-size: 14px; }
+
+  .overview-item-box .box-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+  }
+
+  .overview-item-box .box-body .item { 
+      width: auto;
+      padding: 5px;
+  }
+
+  .progress {
+    width: 47px;
+    height: 47px;
+  }
+
+  .overview-item-box .box-body .item .vertical-graph {
+      height: 47px;
+      width: 47px;
+  }
+
+  .overview-item-box .box-body .item .vertical-graph>span {
+    margin: 0px 2px;
+    width: 5px;
+  }
+
+  .overview-item-box .box-body .item .middle-text-lower { font-size: 14px; }
+
+  .overview-item-box .box-body .item .item-percentage { font-size: 14px; }
+
+  .list-box .action-left .action-circle, .list-box .action-right .action-circle {
+      width: 23px;
+      height: 23px;
+  }
+  
+  .list-box .action-left .action-circle i, .list-box .action-right .action-circle i { 
+      font-size: 11px;  
+      display: flex; 
+      margin: auto; 
+  }
+
+  .list-box .pic-box {
+      width: 70px;
+      height: 70px;
+  }
+
+  .list-box .person-name { 
+      font-size: 14px; 
+      line-height: 0px; 
+  }
+
+  .person-designation { 
+      font-size: 10px; 
+      line-height: 0px; 
+      word-wrap: break-word;
+  }
+
+  .list-box .time {
+      font-size: 10px;
+      line-height: 10px;
+      color: #444141;
+  }
+
+  .list-box .time > span {
+      font-size: 10px;
+      line-height: 10px;
+      color: #000000;
+  }
+
+  .list-box .date {
+      font-size: 10px;
+      line-height: 10px;
+  }
+
+  .list-box .list-btn { height: 23px; }
+
+  .list-box .list-btn .list-details { font-size: 11px; }
+
+  .show-more { padding: 2px 15px; }
+
+  .show-more-text { font-size: 11px; }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .progress {
+    width: 37px;
+    height: 37px;
+  }
+
+  .progress .progress-value {
+    font-size: 9px;
+  }
+
+  .progress .progress-value span {
+    font-size: 9px;
+  }  
+
+  .overview-item-box .box-body .item .vertical-graph {
+    height: 37px;
+    width: 37px;
+  }
+
+  .overview-item-box .box-body .item .vertical-graph>span {
+    margin: 0px 1px;
+    width: 5px;
+  }
+
+  .overview-item-box .box-body .item .middle-text-upper {
+    font-size: 14px;
+  }
+
+  .overview-item-box .box-body .item .middle-text-lower {
+    font-size: 14px;
+  }
+
+  .overview-item-box .box-body .item .item-percentage {
+    font-size: 14px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+@keyframes loading-1 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(3.6);
+      transform: rotate(3.6deg);
+    }
+  }
+  @keyframes loading-2 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(7.2);
+      transform: rotate(7.2deg);
+    }
+  }
+  @keyframes loading-3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(10.8);
+      transform: rotate(10.8deg);
+    }
+  }
+  @keyframes loading-4 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(14.4);
+      transform: rotate(14.4deg);
+    }
+  }
+  @keyframes loading-5 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(18);
+      transform: rotate(18deg);
+    }
+  }
+  @keyframes loading-6 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(21.6);
+      transform: rotate(21.6deg);
+    }
+  }
+  @keyframes loading-7 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(25.2);
+      transform: rotate(25.2deg);
+    }
+  }
+  @keyframes loading-8 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(28.8);
+      transform: rotate(28.8deg);
+    }
+  }
+  @keyframes loading-9 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(32.4);
+      transform: rotate(32.4deg);
+    }
+  }
+  @keyframes loading-10 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(36);
+      transform: rotate(36deg);
+    }
+  }
+  @keyframes loading-11 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(39.6);
+      transform: rotate(39.6deg);
+    }
+  }
+  @keyframes loading-12 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(43.2);
+      transform: rotate(43.2deg);
+    }
+  }
+  @keyframes loading-13 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(46.8);
+      transform: rotate(46.8deg);
+    }
+  }
+  @keyframes loading-14 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(50.4);
+      transform: rotate(50.4deg);
+    }
+  }
+  @keyframes loading-15 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(54);
+      transform: rotate(54deg);
+    }
+  }
+  @keyframes loading-16 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(57.6);
+      transform: rotate(57.6deg);
+    }
+  }
+  @keyframes loading-17 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(61.2);
+      transform: rotate(61.2deg);
+    }
+  }
+  @keyframes loading-18 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(64.8);
+      transform: rotate(64.8deg);
+    }
+  }
+  @keyframes loading-19 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(68.4);
+      transform: rotate(68.4deg);
+    }
+  }
+  @keyframes loading-20 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(72);
+      transform: rotate(72deg);
+    }
+  }
+  @keyframes loading-21 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(75.6);
+      transform: rotate(75.6deg);
+    }
+  }
+  @keyframes loading-22 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(79.2);
+      transform: rotate(79.2deg);
+    }
+  }
+  @keyframes loading-23 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(82.8);
+      transform: rotate(82.8deg);
+    }
+  }
+  @keyframes loading-24 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(86.4);
+      transform: rotate(86.4deg);
+    }
+  }
+  @keyframes loading-25 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90deg);
+    }
+  }
+  @keyframes loading-26 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(93.6);
+      transform: rotate(93.6deg);
+    }
+  }
+  @keyframes loading-27 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(97.2);
+      transform: rotate(97.2deg);
+    }
+  }
+  @keyframes loading-28 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(100.8);
+      transform: rotate(100.8deg);
+    }
+  }
+  @keyframes loading-29 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(104.4);
+      transform: rotate(104.4deg);
+    }
+  }
+  @keyframes loading-30 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(108);
+      transform: rotate(108deg);
+    }
+  }
+  @keyframes loading-31 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(111.6);
+      transform: rotate(111.6deg);
+    }
+  }
+  @keyframes loading-32 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(115.2);
+      transform: rotate(115.2deg);
+    }
+  }
+  @keyframes loading-33 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(118.8);
+      transform: rotate(118.8deg);
+    }
+  }
+  @keyframes loading-34 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(122.4);
+      transform: rotate(122.4deg);
+    }
+  }
+  @keyframes loading-35 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(126);
+      transform: rotate(126deg);
+    }
+  }
+  @keyframes loading-36 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(129.6);
+      transform: rotate(129.6deg);
+    }
+  }
+  @keyframes loading-37 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(133.2);
+      transform: rotate(133.2deg);
+    }
+  }
+  @keyframes loading-38 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(136.8);
+      transform: rotate(136.8deg);
+    }
+  }
+  @keyframes loading-39 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(140.4);
+      transform: rotate(140.4deg);
+    }
+  }
+  @keyframes loading-40 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(144);
+      transform: rotate(144deg);
+    }
+  }
+  @keyframes loading-41 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(147.6);
+      transform: rotate(147.6deg);
+    }
+  }
+  @keyframes loading-42 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(151.2);
+      transform: rotate(151.2deg);
+    }
+  }
+  @keyframes loading-43 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(154.8);
+      transform: rotate(154.8deg);
+    }
+  }
+  @keyframes loading-44 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(158.4);
+      transform: rotate(158.4deg);
+    }
+  }
+  @keyframes loading-45 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(162);
+      transform: rotate(162deg);
+    }
+  }
+  @keyframes loading-46 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(165.6);
+      transform: rotate(165.6deg);
+    }
+  }
+  @keyframes loading-47 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(169.2);
+      transform: rotate(169.2deg);
+    }
+  }
+  @keyframes loading-48 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(172.8);
+      transform: rotate(172.8deg);
+    }
+  }
+  @keyframes loading-49 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(176.4);
+      transform: rotate(176.4deg);
+    }
+  }
+  @keyframes loading-50 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(180);
+      transform: rotate(180deg);
+    }
+  }
+
+
